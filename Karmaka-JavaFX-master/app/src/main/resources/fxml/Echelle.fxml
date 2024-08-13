@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="544" prefWidth="410" xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="karmaka.controllers.EchelleController">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="544.0" prefWidth="410"
+            VBox.vgrow="ALWAYS">
+            <children>
+                <ImageView fitHeight="544.0" fitWidth="410.0" pickOnBounds="true"
+                    preserveRatio="true">
+                    <image>
+                        <Image url="@/images/echelle.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane fx:id="j1Pion" layoutX="95" layoutY="400">
+                    <children>
+                        <Circle fill="#1f93ff" layoutX="37.0" layoutY="53.0" radius="38.0"
+                            stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="j1Nom" layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE"
+                            strokeWidth="0.0" text="Joueur 1" wrappingWidth="52.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="j2Pion" layoutX="240.0" layoutY="400">
+                    <children>
+                        <Circle fill="#ff2121" layoutX="37.0" layoutY="53.0" radius="38.0"
+                            stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="j2Nom" layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE"
+                            strokeWidth="0.0" text="Joueur 2" wrappingWidth="52.0" />
+                    </children>
+                </AnchorPane>
+                <Button onMouseClicked="#handleRetourButton" layoutX="344.0" layoutY="505.0"
+                    mnemonicParsing="false" text="Retour" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

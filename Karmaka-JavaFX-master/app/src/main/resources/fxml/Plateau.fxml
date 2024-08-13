@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+
+<VBox prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="karmaka.controllers.PlateauController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0"
+         VBox.vgrow="ALWAYS" fx:id="anchorPane">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/plateau.png" />
+               </image>
+            </ImageView>
+            <MenuBar>
+               <Menu text="Partie">
+                  <MenuItem text="Charger" onAction="#handleLoad" />
+                  <MenuItem text="Enregistrer" onAction="#handleSave" />
+                  <MenuItem text="Quitter" onAction="#handleQuit" />
+               </Menu>
+            </MenuBar>
+            <!-- Anneaux Adversaire -->
+            <Text layoutX="12" layoutY="51" strokeWidth="0.0" fill="WHITE" text="Anneaux :">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text fx:id="adversaireAnneaux" layoutX="140" layoutY="51" strokeWidth="0.0"
+               fill="WHITE" text="0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+
+            <!-- Vie Future Adversaire -->
+            <ImageView fx:id="adversaireVieFuture" fitHeight="160" fitWidth="115" layoutX="200"
+               layoutY="16">
+               <image>
+                  <Image url="@/images/cartes/Back.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="adversaireVieFutureQte" layoutX="161.0" layoutY="175" strokeWidth="0.0"
+               fill="WHITE"
+               text="0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+
+            <!-- Oeuvres Adversaire -->
+            <ScrollPane vbarPolicy="NEVER" fitToHeight="true" minHeight="175" fitToWidth="true"
+               layoutX="345" layoutY="16"
+               style="-fx-background: transparent; -fx-background-color: transparent;">
+               <HBox fx:id="adversaireOeuvres" spacing="10" prefWidth="590">
+                  <children>
+                  </children>
+               </HBox>
+            </ScrollPane>
+
+            <!-- Deck Adversaire -->
+            <ImageView fx:id="adversaireDeck" fitHeight="160" fitWidth="115" layoutX="965"
+               layoutY="16">
+               <image>
+                  <Image url="@/images/cartes/Back.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="adversaireDeckQte" layoutX="1092.0" layoutY="51" strokeWidth="0.0"
+               fill="WHITE" text="0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+
+            <!-- Bouton Echelle -->
+            <Button onMouseClicked="#handleEchelleButton" layoutX="100" layoutY="237"
+               mnemonicParsing="false" prefHeight="70" prefWidth="160" text="Echelle" />
+
+            <!-- Bouton Tour Suivant Robot -->
+            <Button fx:id="suivantRobot" onMouseClicked="#handleSuivantRobot" layoutX="1100"
+               layoutY="237"
+               mnemonicParsing="false" prefHeight="70" prefWidth="160" text="Tour suivant" />
+
+            <!-- Source -->
+            <ImageView fx:id="source" fitHeight="160" fitWidth="115" layoutX="415" layoutY="192">
+               <image>
+                  <Image url="@/images/cartes/Back.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="sourceQte" layoutX="365.0" layoutY="227.0" strokeWidth="0.0" fill="WHITE"
+               text="0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+
+            <!-- Fosse -->
+            <ImageView fx:id="fosse" fitHeight="160" fitWidth="115" layoutX="550" layoutY="192">
+            </ImageView>
+            <Text fx:id="fosseQte" layoutX="675" layoutY="227" strokeWidth="0.0" fill="WHITE"
+               text="0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+
+            <!-- Anneaux -->
+            <Text layoutX="12" layoutY="579" strokeWidth="0.0" fill="WHITE" text="Anneaux :">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text fx:id="anneaux" layoutX="140" layoutY="579" strokeWidth="0.0" fill="WHITE"
+               text="0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+
+            <!-- Deck -->
+            <ImageView onMouseClicked="#handleDeck" fx:id="deck" fitHeight="160" fitWidth="115"
+               layoutX="200" layoutY="368">
+               <image>
+                  <Image url="@/images/cartes/Back.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="deckQte" layoutX="161.0" layoutY="403" strokeWidth="0.0" fill="WHITE"
+               text="0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+
+            <!-- Oeuvres -->
+            <ScrollPane vbarPolicy="NEVER" fitToHeight="true" minHeight="175" fitToWidth="true"
+               layoutX="345" layoutY="368"
+               style="-fx-background: transparent; -fx-background-color: transparent;">
+               <HBox fx:id="oeuvres" spacing="10" prefWidth="590">
+                  <children>
+                  </children>
+               </HBox>
+            </ScrollPane>
+
+            <!-- Vie Future -->
+            <ImageView fx:id="vieFuture" fitHeight="160" fitWidth="115" layoutX="965" layoutY="368">
+            </ImageView>
+            <Text fx:id="vieFutureQte" layoutX="1092.0" layoutY="403" strokeWidth="0.0" fill="WHITE"
+               text="0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+
+            <!-- Main -->
+            <ScrollPane vbarPolicy="NEVER" fitToHeight="true" minHeight="175" fitToWidth="true"
+               layoutX="200" layoutY="544"
+               style="-fx-background: transparent; -fx-background-color: transparent;">
+               <HBox fx:id="main" spacing="10" prefWidth="880">
+                  <children>
+                  </children>
+               </HBox>
+            </ScrollPane>
+
+            <!-- Bouton Passer -->
+            <Button fx:id="passer" onMouseClicked="#handlePasser" layoutX="1100" layoutY="639"
+               mnemonicParsing="false" prefHeight="70" prefWidth="160" text="Passer son tour" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

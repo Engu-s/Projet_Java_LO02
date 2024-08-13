@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21"
+   xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="karmaka.controllers.PlateauPlaceholderController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0"
+         VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/plateau.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="adversaireVieFuture" fitHeight="160" fitWidth="115" layoutX="200"
+               layoutY="16">
+            </ImageView>
+            <ImageView fx:id="adversaireOeuvres" fitHeight="160" fitWidth="115" layoutX="820"
+               layoutY="16">
+            </ImageView>
+            <ImageView fx:id="adversaireDeck" fitHeight="160" fitWidth="115" layoutX="965"
+               layoutY="16">
+            </ImageView>
+            <Button layoutX="100" layoutY="237"
+               mnemonicParsing="false" prefHeight="70" prefWidth="160" text="Echelle" />
+            <ImageView fx:id="source" fitHeight="160" fitWidth="115" layoutX="415" layoutY="192">
+            </ImageView>
+            <ImageView fx:id="fosse" fitHeight="160" fitWidth="115" layoutX="550" layoutY="192">
+            </ImageView>
+            <ImageView fx:id="deck" fitHeight="160" fitWidth="115" layoutX="200" layoutY="368">
+            </ImageView>
+            <ImageView fx:id="oeuvres" fitHeight="160" fitWidth="115" layoutX="345" layoutY="368">
+            </ImageView>
+            <ImageView fx:id="vieFuture" fitHeight="160" fitWidth="115" layoutX="965" layoutY="368">
+            </ImageView>
+            <ImageView fx:id="main" fitHeight="160" fitWidth="115" layoutX="425" layoutY="544">
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
